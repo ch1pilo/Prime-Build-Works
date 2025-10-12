@@ -303,7 +303,7 @@ header img {
     align-items: flex-end;
 }
 
-.contexto p {
+.container-about .contexto p {
     font-size: 18px;
     color: var(--primary);
     margin-bottom: 20px;
