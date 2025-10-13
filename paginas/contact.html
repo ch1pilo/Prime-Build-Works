@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact Prime Build Works - Premium Countertops">
+    <meta name="author" content="Prime Build Works" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/stylecontact.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylejs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Contact Us - Prime Build Works</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/icon.png" alt="logo">
+            <p>Prime Build Works</p>
+        </div>
+        <div class="nav">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="countertops.html">Countertops</a>
+            <a href="best_sellers.html">BEST SELLERS</a>
+            <a href="" class="active">Contact</a>
+        </div>
+    </header>
+
+    <!-- Sección Principal de Contacto -->
+    <section class="contact-hero">
+        <div class="contact-container">
+            <div class="contact-info reveal-from-left">
+                <h1>Let's Create Something <span>Extraordinary</span> Together</h1>
+                <p class="contact-subtitle">Your dream kitchen or bathroom is just a conversation away. Reach out to us and let's start planning your perfect space.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Our Location</h3>
+                            <p>123 Design Avenue<br>Creative District, CD 10101</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Call Us</h3>
+                            <p>+1 <br>+1 </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email Us</h3>
+                            <p>info@primebuildworks.ca<br>danielromero@primebuildworks.ca</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Business Hours</h3>
+                            <p>horario de lunes a viernes<br>fines de semana</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-contact">
+                    <h3>Follow Our Work</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>@primebuildworks</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook"></i>
+                            <span>Prime Build Works</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Chat with us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container reveal-from-right">
+                <div class="form-header">
+                    <h2>Start Your Project</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" id="firstName" required>
+                            <label for="firstName">First Name</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="lastName" required>
+                            <label for="lastName">Last Name</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group full-width">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Project Subject</label>
+                    </div>
+                    
+                    <div class="input-group full-width">
+                        <select id="service" required>
+                            <option value="" disabled selected></option>
+                            <option value="kitchen">Kitchen Countertops</option>
+                            <option value="bathroom">Bathroom Vanities</option>
+                            <option value="commercial">Commercial Projects</option>
+                            <option value="consultation">Design Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="service">Service Needed</label>
+                    </div>
+                    
+                    <div class="input-group full-width">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Project Details</label>
+                    </div>
+                    
+                    
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación -->
+    <section class="location-section">
+        <div class="location-container">
+            <div class="location-info reveal-from-left">
+                <h2>Visit Our Showroom</h2>
+                <p>Come see our premium countertop materials in person. Our showroom features the finest selection of quartz, granite, marble, and more.</p>
+                
+                <div class="showroom-features">
+                    <div class="feature">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>Material Samples</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-couch"></i>
+                        <span>Design Displays</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Expert Consultation</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <span>Free Parking</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="directions-btn">
+                    <i class="fas fa-map"></i>
+                    Get Directions
+                </a>
+            </div>
+            
+            <div class="map-container reveal-from-right">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Interactive Map</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.20418506652!2d-114.02041402400017!3d50.86441955747183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53719de353a95901%3A0xf66837cc363ebbe1!2sWalgrove%20Terrace%20SE%2C%20Calgary%2C%20AB%2C%20Canad%C3%A1!5e0!3m2!1ses!2sve!4v1760310401174!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <h1>Prime Build Works</h1>
+            <p>Transforming houses into homes, one exquisite countertop at a time. Where craftsmanship meets innovation, and every installation tells a story of quality, durability, and breathtaking beauty that stands the test of time.</p>
+        </div>
+        <div class="footer-nav">
+            <h1>Navigation</h1>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="countertops.html">Countertops</a>
+            <a href="contact.html">Contact</a>
+            <a href="best_sellers.html">Best Sellers</a>
+        </div>
+        <div class="contact">
+            <h1>Connect With Us</h1>
+            <div class="redes">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="idioma">
+                <p>Change Language</p>
+                <i class="idioma"></i>
+            </div>
+        </div>
+    </footer>
+
+    <div id="particles-js"></div>
+    <script src="../js/particles.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/scripts.js"></script>    
+        
+</body>
+</html>
