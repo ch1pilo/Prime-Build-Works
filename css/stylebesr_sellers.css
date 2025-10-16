@@ -118,3 +118,45 @@
     transform: translateY(0);
     transition: all 0.3s ease;
 }
+
+@media (max-width: 768px)  {
+    .conten_project{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conten_project::before{
+    clip-path: polygon(0 0, 25% 0, 100% 15%, 100% 100%, 0 100%);}
+
+    .conten_project img{
+        width: 90%;
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project h1{
+        margin: 0;
+        width: 70%;
+    }
+
+    .contexto h2{
+        width: 100%;
+    }
+    .contexto{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contexto p, .inverso .contexto p{
+        text-align: center;
+    }
+    .contexto a{
+        margin-left: 0;
+        margin-right: 0;
+        margin: auto;
+    }
+}

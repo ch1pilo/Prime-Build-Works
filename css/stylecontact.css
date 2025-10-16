@@ -422,6 +422,11 @@ header{
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+
+    .contact-hero{
+        padding: 0 35px;
+    }
+
     .contact-container,
     .location-container {
         grid-template-columns: 1fr;
@@ -440,6 +445,10 @@ header{
 @media (max-width: 768px) {
     .contact-hero {
         padding: 60px 15px;
+    }
+
+    .contact-hero h1,.contact-hero p, .contact-details{
+        width: auto;
     }
     
     .contact-container,
@@ -466,5 +475,99 @@ header{
     
     .section-title {
         font-size: 2rem;
+    }
+
+    .social-contact h3 {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 60px 15px;
+        min-height: auto; /* ← Importante para móviles */
+    }
+    
+    .contact-container {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+    
+    .contact-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .contact-item {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-form-container {
+        padding: 25px 20px;
+        margin: 0 10px; /* ← Previene desbordamiento */
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+        padding: 12px;
+    }
+    
+    /* Asegura que los textos no se salgan */
+    .contact-text h3,
+    .contact-text p,
+    .social-contact h3 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* Para teléfonos muy pequeños */
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 40px 10px;
+    }
+    
+    .contact-info h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form-container {
+        padding: 20px 15px;
+        margin: 0 5px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .social-links {
+        gap: 8px;
+    }
+    
+    .social-link {
+        padding: 8px 12px;
+        font-size: 0.9rem;
     }
 }
