@@ -40,6 +40,26 @@ html, body {
     overflow-x: hidden;
 }
 
+.btn-flotante{
+    position: fixed;
+    right: 15PX;
+    bottom: 15px;
+    background-color: var(--tercero);
+    padding: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 8px var(--primary-transparente);
+    z-index: 50;
+}
+.btn-flotante a i{
+    font-size: 40px;
+    color: green;
+}
+
 /* ===== HEADER Y NAVEGACIÓN ===== */
 header {
     display: flex;
@@ -676,6 +696,56 @@ footer {
     color: var(--tercero);
     font-size: 14px;
 }
+
+.best_s{
+    padding: 20px;
+    width: 100%;
+    background-color: var(--tercero);
+}
+
+.container-bs{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.best_s h1{
+    text-align: center;
+    padding: 20px;
+    border-bottom: solid 3px var(--secundary);
+    width: auto;
+}
+
+.container-bs img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container-bs .car{
+    padding: 0 0 15px 0;
+    background-color: var(--primari-gradiente);
+    border-radius: 15px;
+    color: var(--tercero);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-bs .car a{
+    color: var(--secundary);
+    border: solid 3px var(--secundary);
+    padding: 8px 18px;
+    border-radius: 15px;
+}
+
+
+
+
+.container-bs .car p{
+    text-align: center;
+    padding: 10px;
+}
+
 
 /* ===== ANIMACIONES ===== */
 @keyframes slideInFromRight {
