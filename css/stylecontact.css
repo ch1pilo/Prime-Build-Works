@@ -252,6 +252,7 @@ header{
 
 /* Location Section */
 .location-section {
+    margin-top: 20px;
     padding: 80px 20px;
     background: var(--tercero);
 }
@@ -557,7 +558,6 @@ header{
     }
     
     .contact-item {
-        flex-direction: column;
         gap: 10px;
         text-align: center;
     }

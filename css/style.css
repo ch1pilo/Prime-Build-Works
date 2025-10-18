@@ -40,12 +40,24 @@ html, body {
     overflow-x: hidden;
 }
 
+@keyframes flotanteMovimiento {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .btn-flotante{
     position: fixed;
     right: 15PX;
     bottom: 15px;
     background-color: var(--tercero);
-    padding: 18px;
+    padding: 35px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -54,12 +66,23 @@ html, body {
     justify-content: center;
     box-shadow: 0 3px 8px var(--primary-transparente);
     z-index: 50;
+    animation: flotanteMovimiento 2s infinite ease-in-out;
 }
 .btn-flotante a i{
-    font-size: 40px;
-    color: green;
+    font-size: 50px;
+    color: rgb(0, 128, 0);
+}
+.btn-flotante a i:hover{
+    font-size: 53px;
+    color: var(--tercero);
+    transition: 0.3s;
 }
 
+.btn-flotante:hover{
+   padding: 37px;
+   background-color: rgb(0, 128, 0);
+   transition: 0.3s;
+}
 /* ===== HEADER Y NAVEGACIÓN ===== */
 header {
     display: flex;
@@ -696,57 +719,237 @@ footer {
     color: var(--tercero);
     font-size: 14px;
 }
-
-.best_s{
-    padding: 20px;
+/* ===== CARRUSEL BEST SELLERS - TIPO TARJETAS CORREGIDO ===== */
+.best_s {
+    position: relative;
+    padding: 80px 20px;
     width: 100%;
     background-color: var(--tercero);
+    overflow: hidden;
 }
 
-.container-bs{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-.best_s h1{
+.best_s h1 {
     text-align: center;
-    padding: 20px;
     border-bottom: solid 3px var(--secundary);
-    width: auto;
+    margin: 0 auto 50px;
+    width: 30%;
+    border-radius: 15px;
+    padding-bottom: 15px;
+    color: var(--primary);
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-.container-bs img{
-    width: 100%;
-    border-radius: 15px;
+.best-sellers-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
-.container-bs .car{
-    padding: 0 0 15px 0;
-    background-color: var(--primari-gradiente);
+.best-sellers-wrapper {
+    overflow: hidden;
     border-radius: 15px;
-    color: var(--tercero);
+    position: relative;
+}
+
+.best-sellers-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.bs-card {
+    flex: 0 0 calc(33.333% - 20px); /* 3 tarjetas visibles por defecto */
+    min-width: calc(33.333% - 20px);
+    background: white;
+    border-radius: 15px;
+    padding: 0 0 25px 0;
+    box-shadow: 0 8px 25px rgba(4, 42, 57, 0.1);
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    border: 2px solid transparent;
 }
 
-.container-bs .car a{
-    color: var(--secundary);
-    border: solid 3px var(--secundary);
-    padding: 8px 18px;
-    border-radius: 15px;
+.bs-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(4, 42, 57, 0.15);
+    border-color: var(--secundary);
 }
 
+.bs-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid var(--secundary);
+}
 
-
-
-.container-bs .car p{
+.bs-card .descripcion {
     text-align: center;
-    padding: 10px;
+    padding: 20px 15px;
+    color: var(--primary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin: 0;
 }
 
+.bs-card a {
+    color: var(--secundary);
+    border: solid 2px var(--secundary);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin: 0 20px;
+    text-align: center;
+    display: inline-block;
+}
 
+.bs-card a:hover {
+    background: linear-gradient(135deg, var(--secundary) 0%, var(--secundary-light) 100%);
+    color: var(--tercero);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(226, 137, 83, 0.3);
+}
+
+/* Controles del carrusel */
+.bs-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--primary);
+    color: var(--tercero);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--secundary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.bs-control:hover {
+    background: var(--secundary);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 5px 15px rgba(226, 137, 83, 0.4);
+}
+
+.bs-prev {
+    left: 0;
+}
+
+.bs-next {
+    right: 0;
+}
+
+/* Indicadores */
+.bs-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.bs-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bs-indicator.active {
+    opacity: 1;
+    background-color: var(--secundary);
+    transform: scale(1.2);
+}
+
+.bs-indicator:hover {
+    opacity: 0.7;
+}
+
+/* Responsive para best-sellers */
+@media (max-width: 1024px) {
+    .best-sellers-container {
+        padding: 0 50px;
+    }
+    
+    .bs-card {
+        flex: 0 0 calc(50% - 15px); /* 2 tarjetas en tablet */
+        min-width: calc(50% - 15px);
+    }
+    
+    .best_s h1 {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .best-sellers-container {
+        padding: 0 40px;
+    }
+    
+    .bs-card {
+        flex: 0 0 calc(100% - 10px); /* 1 tarjeta en móvil */
+        min-width: calc(100% - 10px);
+    }
+    
+    .best_s h1 {
+        width: 60%;
+        font-size: 2rem;
+    }
+    
+    .bs-control {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .best-sellers-container {
+        padding: 0 30px;
+    }
+    
+    .best_s {
+        padding: 60px 15px;
+    }
+    
+    .best_s h1 {
+        width: 80%;
+        font-size: 1.8rem;
+    }
+    
+    .bs-control {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .bs-card img {
+        height: 180px;
+    }
+    
+    .bs-card .descripcion {
+        padding: 15px 12px;
+        font-size: 0.9rem;
+    }
+}
+.logo-nav{
+    display: none;
+}
 /* ===== ANIMACIONES ===== */
 @keyframes slideInFromRight {
     from {
@@ -848,6 +1051,8 @@ footer {
     animation: fadeInUp 0.8s ease-out;
 }
 
+
+
 /* ===== MENÚ MÓVIL ===== */
 .hmabu {
     display: none;
@@ -859,6 +1064,11 @@ footer {
 @media (max-width: 1024px) {
     .container {
         width: 100%;
+    }
+
+    .logo-nav{
+        display: block;
+        width: 50%;
     }
 
     .logo {
@@ -893,7 +1103,7 @@ footer {
         height: 100vh;
         top: 0;
         right: -100%;
-        padding: 130px 0;
+        padding: 20px 0;
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -976,21 +1186,7 @@ footer {
         flex-direction: row;
         justify-content: center;
     }
-}
-
-.error{
-    position: static;
-}
-
-/* Móvil (768px) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        padding: 20px;
-    }
-
-    /* Menú móvil activo */
-    .nav.active {
+     .nav.active {
         right: 0;
     }
 
@@ -1006,6 +1202,34 @@ footer {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 
+    header p {
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+}
+
+.error{
+    position: static;
+}
+
+/* Móvil (768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 20px;
+    }
+
+    /* Menú móvil activo */
+    
     header p {
         text-align: left;
     }
