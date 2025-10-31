@@ -138,7 +138,6 @@ function enhanceCardInteractions() {
 
 // Inicializar todas las funcionalidades cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    initTestimonialsCarousel();
     enhanceCardInteractions();
     
     // Reiniciar contadores al hacer scroll (para demostración)
