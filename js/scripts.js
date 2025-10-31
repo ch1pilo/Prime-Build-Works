@@ -139,7 +139,6 @@ function enhanceCardInteractions() {
 // Inicializar todas las funcionalidades cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     enhanceCardInteractions();
-    
     // Reiniciar contadores al hacer scroll (para demostración)
     let counted = false;
     window.addEventListener('scroll', function() {
