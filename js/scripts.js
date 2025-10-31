@@ -120,11 +120,6 @@ function animateCounters() {
         }
     });
 }
-// Carrusel de testimonios (opcional - para futura implementación)
-function initTestimonialsCarousel() {
-    // Puedes implementar un carrusel aquí si quieres que los testimonios roten
-    console.log('Testimonials carousel ready for implementation');
-}
 
 // Efectos hover mejorados para tarjetas
 function enhanceCardInteractions() {
