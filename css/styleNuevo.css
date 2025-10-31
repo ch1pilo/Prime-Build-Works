@@ -714,6 +714,34 @@ a {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/* cierre */
+
+.contendor-cierre{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex-direction: row;
+}
+
+.cierre p{
+    color:var(--tercero);
+    font-size: 16px; 
+}
+
+.cierre img{
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 0 40px;
+    object-fit: cover;
+    border: 4px solid var(--secundary-lightest);
+    box-shadow: 0 10px 30px rgba(226, 137, 83, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
 
 /* ===== MENÚ MÓVIL ===== */
 .hmabu {
@@ -775,7 +803,6 @@ footer {
     margin: 15px 0;
 }
 
-
 .redes a i {
     font-size: 28px;
     color: var(--tercero);
@@ -808,6 +835,10 @@ footer {
 @media (max-width: 1024px) {
     .container {
         width: 100%;
+    }
+
+    .idioma{
+        justify-content: center;
     }
 
     .logo-nav{
