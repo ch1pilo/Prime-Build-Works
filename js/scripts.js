@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const statsSection = document.querySelector('.stats-banner');
         const screenPosition = window.innerHeight / 1.3;
-        
-        if (sectionPosition < screenPosition && !counted) {
+
+        if (screenPosition && !counted) {
             animateCounters();
             counted = true;
         }
